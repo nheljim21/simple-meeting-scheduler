@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meeting Scheduler</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f4f6f9;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .time-slots {
+      margin-top: 10px;
+    }
+
+    .time-slots label {
+      font-weight: normal;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .confirmation {
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Schedule a Meeting</h2>
+
+    <label for="date">📅 Select Date</label>
+    <input type="date" id="date" name="date">
+
+    <label>🕒 Select Time Slot</label>
+    <div class="time-slots">
+      <input type="radio" name="time" id="t1" value="09:00 AM">
+      <label for="t1">9:00 AM – 9:30 AM</label><br>
+      <input type="radio" name="time" id="t2" value="10:00 AM" checked>
+      <label for="t2">10:00 AM – 10:30 AM</label><br>
+      <input type="radio" name="time" id="t3" value="11:00 AM">
+      <label for="t3">11:00 AM – 11:30 AM</label><br>
+    </div>
+
+    <label for="title">📌 Meeting Title</label>
+    <input type="text" id="title" name="title" placeholder="e.g. Project Kickoff Call">
+
+    <label for="participants">👥 Participants</label>
+    <input type="text" id="participants" name="participants" placeholder="Enter emails">
+
+    <label for="location">📍 Location</label>
+    <select id="location">
+      <option value="zoom">Zoom</option>
+      <option value="google">Google Meet</option>
+      <option value="custom">Custom</option>
+    </select>
+
+    <label for="notes">📝 Notes</label>
+    <textarea id="notes" rows="3" placeholder="Write a short agenda or note..."></textarea>
+
+    <button onclick="scheduleMeeting()">Schedule Meeting</button>
+
+    <div id="confirmation" class="confirmation"></div>
+  </div>
+
+  <script>
+    function scheduleMeeting() {
+      const date = document.getElementById('date').value;
+      const time = document.querySelector('input[name="time"]:checked').value;
+      document.getElementById('confirmation').textContent =
+        `✅ Meeting scheduled for ${date} at ${time}.`;
+    }
+  </script>
+
+</body>
+</html>
