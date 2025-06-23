@@ -37,7 +37,7 @@ You can host this file locally or use services like CodePen, GitHub Pages, or Ne
 
 ## Screenshot
 
-[! screenshot]![Screenshot (57)](https://github.com/user-attachments/assets/5d5ecd7c-6d94-4cf5-89b2-a62d130ff4e6)
+![Screenshot (57)](https://github.com/user-attachments/assets/5d5ecd7c-6d94-4cf5-89b2-a62d130ff4e6)
 
 
 ## 🛠️ Tech Stack
