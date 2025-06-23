@@ -14,6 +14,7 @@ A clean and minimal *HTML/CSS* mockup of a meeting scheduling interface. This pr
 ## 📂 Project Structure
 
 /meeting-scheduler/
+            
             │
             
             ├── index.html # Main HTML structure
