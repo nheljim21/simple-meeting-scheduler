@@ -15,8 +15,11 @@ A clean and minimal *HTML/CSS* mockup of a meeting scheduling interface. This pr
 
 /meeting-scheduler/
             │
+            
             ├── index.html # Main HTML structure
+            
             ├── style.css # Embedded CSS in index.html (can be externalized)
+            
             └── README.md # Project overview and setup
 
 
@@ -33,9 +36,9 @@ You can host this file locally or use services like CodePen, GitHub Pages, or Ne
 
 ## 🛠️ Tech Stack
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
+- **HTML5** – Page layout and form structure
+- **CSS3** – Basic styling (embedded in the same HTML file)
+- **Vanilla JavaScript** – Simple interaction for scheduling confirmation
 
 ## 📌 Notes
 
